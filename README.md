@@ -43,8 +43,8 @@ wildfire-esg-biodiversity-analytics/
 ├── assets/                             # High-resolution generated charts & dashboards
 │   ├── eda_biodiversity_risk_dashboard.png
 │   └── 2030_wildfire_biodiversity_projection.png
-├── notebook/                           # Jupyter Notebooks
-│   └── wildfire_esg_analytics.ipynb    # End-to-end data pipeline, EDA & ML model
+├── wildfire_esg_analytics.ipynb        # End-to-end data pipeline, EDA & ML model
+├── LICENSE                             # Open-source project license
 └── README.md
  ```
 👥 Original Team & Program Credits
