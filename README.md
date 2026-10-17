@@ -1,75 +1,59 @@
+# 🌲 Wildfire Impact & Predictive Environmental Modeling (1988–2030)
 
-Bu proje, **Gelecek Hayalim – W-CODE 2.0** programı kapsamında geliştirilmiştir.  
-Amaç; Türkiye’deki orman yangınlarının nedenlerini, yıllara ve bölgelere göre dağılımını, bu yangınların orman kaybına etkisini analiz ederek **veriye dayalı çevresel farkındalık** yaratmaktır.
+An end-to-end ESG Analytics and Machine Learning project evaluating 36+ years of historical wildfire data, regional biodiversity risk drivers, and projecting 2030 burn coverage across Türkiye using Python & Scikit-Learn.
 
-## Proje Hedefleri
+---
 
-- Yangınların çıkış nedenlerini yıllara ve bölgelere göre analiz etmek  
-- Yangına bağlı orman kayıplarını, toplam orman kayıplarıyla karşılaştırmak  
-- Görselleştirme araçlarıyla veriyi anlaşılır ve yorumlanabilir hale getirmek  
-- Veri bilimi teknikleriyle çevresel veri üzerinden anlamlı sonuçlara ulaşmak  
+## 📌 Project Overview & Program Context
+This project was initially developed as part of the **Gelecek Hayalim – W-CODE 2.0** talent program supported by **Ford Otosan, Mikado Impact, Vehbi Koç Vakfı, and Kodluyoruz**. 
 
-## Ekip
+Building upon the team's initial exploratory work, this repository has been expanded into an advanced **ESG & Environmental Analytics Case Study**, integrating biological domain knowledge, automated data cleaning pipelines, and predictive risk modeling.
 
-- **Sinem Akyaman** – Veri temizleme, analiz, görselleştirme  
-- **Sıla Topal** – Yangın nedenleri ve bölgesel analiz  
-- **Aylin Günay** – Makine öğrenmesi ile yangın tahminleme  
+---
 
-##  Kullanılan Veri Setleri
+## 🎯 Key Technical & ESG Highlights
+- **Automated Data Pipeline (1988–2024):** Cleaned, parsed, and merged multi-source datasets from the General Directorate of Forestry (OGM) and Global Forest Watch (GFW), resolving character encoding (`windows-1254`) and decimal alignment issues.
+- **Predictive ML Risk Modeling (Scikit-Learn):** Trained Linear Regression models on historical cause-specific data to project 2030 burn risks (estimating ~14.4K hectares lost to negligence vs ~7.3K hectares to intentional causes).
+- **Biodiversity & Ecosystem Damage Metrics:** Leveraged biological background to construct an ecosystem damage index, quantifying tree cover loss and habitat impact resulting from wildfire escalation.
+- **Regional Breakdown (2024 Analysis):** Identified top high-risk provinces (e.g., Manisa, İzmir, Bolu) and categorized primary anthropogenic causes (stubble burning, picnic fires, power lines).
 
-| Kaynak | Açıklama |
-|--------|---------|
-| Orman Genel Müdürlüğü | Yıllara göre orman yangını sayısı, yanan alan, çıkış nedenleri |
-| Global Forest Watch | 2001–2024 ağaç örtüsü kaybı ve yangın ilişkisi |
-| Subnational Tree Cover Loss | Bölgesel düzeyde orman kayıpları |
-| Bölge Müdürlüklerine Göre Dağılım | Yangın nedenlerinin bölgesel dağılımı (2013–2024) |
+---
 
-## Yapılan Analizler
+## 📊 Visual Dashboards & Projections
 
-- Yıllara göre ihmal, kasıt ve doğal nedenli yangınların hektar bazında değişimi
-- Bölge müdürlüklerine göre toplam etki alanı
-- Yangın nedenlerinin yıllar içindeki artış/azalış trendleri
-- Toplam orman kaybı ve yangına bağlı kaybın karşılaştırması
-- Yıllara göre nedenlerin stacked bar (yığılmış çubuk) gösterimi
-- Makine öğrenmesi ile 2030 yılına kadar olası yangın tahminleri
+### 1. Exploratory Data Analysis & Regional Risk Dashboard
+![ESG Biodiversity Risk Dashboard](assets/eda_biodiversity_risk_dashboard.png)
 
-## Kullanılan Teknolojiler
+### 2. Predictive Risk Projection (2025–2030)
+![2030 Wildfire Prediction Chart](assets/2030_wildfire_biodiversity_projection.png)
 
-- `Python`
-- `Pandas`, `NumPy` – Veri işleme
-- `Matplotlib`, `Seaborn` – Görselleştirme
-- `Scikit-learn` – Regresyon tahmini (ML)
+---
 
-## Proje Dosya Yapısı
+## 🛠️ Tech Stack
+- **Programming & Libraries:** Python (`Pandas`, `NumPy`, `Scikit-learn`, `Matplotlib`, `Seaborn`)
+- **Data Sources:** General Directorate of Forestry (OGM) & Global Forest Watch (GFW)
+- **Domain Focus:** ESG Analytics, Environmental Risk Modeling, Biodiversity Impact, Time Series Forecasting
 
- OrmanYanginiAnalizi/
-├─ data/                # CSV & Excel veri kaynakları
-├─ notebooks/           # Jupyter/Colab analiz dosyaları
-├─ README.md
+---
 
- ## Öğrenilenler
-_Farklı kaynaklardan gelen veri setlerini birleştirme
-_Veri temizleme (eksik veriler, encoding sorunları, format dönüşümleri)
-_Zaman serisi ve kategorik analizler
-_Gerçek bir sorun üzerine veri bilimi uygulaması
-_Grup içi rol dağılımı ve proje yönetimi
+## 📂 Repository Structure
+```text
+wildfire-esg-biodiversity-analytics/
+├── data/                               # CSV & Excel raw data sources (OGM & GFW)
+├── assets/                             # High-resolution generated charts & dashboards
+│   ├── eda_biodiversity_risk_dashboard.png
+│   └── 2030_wildfire_biodiversity_projection.png
+├── notebook/                           # Jupyter Notebooks
+│   └── wildfire_esg_analytics.ipynb    # End-to-end data pipeline, EDA & ML model
+└── README.md
+ ```
+👥 Original Team & Program Credits
+Developed during the Gelecek Hayalim – W-CODE 2.0 program with team contributions:
 
-## Teşekkürler
-Bu proje, Ford Otosan, Mikado Impact, Vehbi Koç Vakfı ve Kodluyoruz’un desteklediği Gelecek Hayalim – W-CODE 2.0 programı kapsamında gerçekleştirilmiştir.
-STEM alanındaki kadınları teknolojiyle buluşturma misyonuyla yola çıkan bu yolculukta bize eşlik eden herkese teşekkür ederiz.
+Sinem Akyaman – Data Cleaning, Pipeline Engineering, ESG Biodiversity Indexing, ML Forecasting & Analytics
 
-## Projeyi Çalıştırmak İçin
+Sıla Topal – Cause-Specific & Regional Analysis
 
-1.data/ klasöründeki dosyaları indir
-2.Notebooks klasöründeki .ipynb dosyasını aç
-3.Gerekli kütüphaneleri yükle
+Aylin Günay – Machine Learning Modeling Support
 
-
-## İletişim
-
-sinemakyaman@gmail.com
-
-[LinkedIn](https://www.linkedin.com/in/sinemakyaman)
-
-[GitHub](https://github.com/Sinemakyaman)
-
+Special thanks to Ford Otosan, Mikado Impact, Vehbi Koç Vakfı, and Kodluyoruz for empowering women in STEM.
